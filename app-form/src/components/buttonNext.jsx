@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ButtonNext({ onClick, onBack }) {
+function ButtonNext({ onClick, onBack, name }) {
   return (
     <>
       <div className="bg-white p-6 flex justify-between">
@@ -14,7 +14,7 @@ function ButtonNext({ onClick, onBack }) {
           onClick={onClick}
           className="bg-primary-marine-blue font-semibold text-gray-200 py-2 px-4 rounded"
         >
-          Next Step
+          {name}
         </button>
       </div>
     </>

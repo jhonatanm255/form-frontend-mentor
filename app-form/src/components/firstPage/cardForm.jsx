@@ -25,7 +25,7 @@ function CardForm({ onSubmit }) {
           {/* Pasar la referencia al formulario */}
         </div>
 
-        <ButtonNext onClick={handleButtonClick} />
+        <ButtonNext name={"Next Step"} onClick={handleButtonClick} />
       </div>
     </>
   );

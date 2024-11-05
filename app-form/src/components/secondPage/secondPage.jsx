@@ -29,7 +29,11 @@ function SecondPage() {
           />
         </div>
       </div>
-      <ButtonNext onClick={handleNextStep} onBack={handleBack} />
+      <ButtonNext
+        name={"Next Step"}
+        onClick={handleNextStep}
+        onBack={handleBack}
+      />
     </div>
   );
 }

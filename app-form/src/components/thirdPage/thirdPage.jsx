@@ -12,7 +12,7 @@ function ThirdPage() {
 
   // Define la función handleNextStep
   const handleNextStep = () => {
-    navigate("/fourPage");
+    navigate("/fourthPage");
   };
 
   // Define la función handleBack si es necesaria
@@ -34,7 +34,11 @@ function ThirdPage() {
         <Services onChange={handleServiceChange} />{" "}
         {/* Si necesitas pasar la función */}
       </div>
-      <ButtonNext onClick={handleNextStep} onBack={handleBack} />
+      <ButtonNext
+        name={"Next Step"}
+        onClick={handleNextStep}
+        onBack={handleBack}
+      />
     </div>
   );
 }

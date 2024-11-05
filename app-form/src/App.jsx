@@ -3,6 +3,8 @@ import { SelectionProvider } from "./components/selectionContext"; // Asegúrate
 import FirstPage from "./components/firstPage/firstPage";
 import SecondPage from "./components/secondPage/secondPage";
 import ThirdPage from "./components/thirdPage/thirdPage"; // Asegúrate de importar el componente
+import FourthPage from "./components/fourthPage/fourthPage";
+import Confirm from "./components/fourthPage/confirm";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route path="/" element={<FirstPage />} />
             <Route path="/second" element={<SecondPage />} />
             <Route path="/thirdPage" element={<ThirdPage />} />
+            <Route path="/fourthPage" element={<FourthPage />} />
+            <Route path="/confirm" element={<Confirm />} />
           </Routes>
         </div>
       </Router>
