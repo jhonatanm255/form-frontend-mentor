@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
 const SelectionContext = createContext();
-
 export const useSelectionContext = () => {
   return useContext(SelectionContext);
 };

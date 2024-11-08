@@ -2,7 +2,7 @@ import React from "react";
 import CardForm from "./cardForm";
 import Header from "../header";
 import { useNavigate } from "react-router-dom";
-import { useSelectionContext } from "../selectionContext"; // Asegúrate de la ruta correcta
+import { useSelectionContext } from "../selectionContext";
 
 function FirstPage() {
   const navigate = useNavigate();
@@ -12,8 +12,9 @@ function FirstPage() {
   const handleFormSubmit = (formData) => {
     console.log("Form submitted with data:", formData);
     alert("Form submitted successfully");
-    setIsAnnual(formData.isAnnual); // Asegúrate de que formData contenga la propiedad isAnnual
-    navigate("/second"); // Navega a la segunda página después de enviar el formulario
+    setIsAnnual(formData.isAnnual);
+    
+    navigate("/second");
   };
 
   return (
