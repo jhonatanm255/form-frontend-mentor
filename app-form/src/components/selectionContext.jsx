@@ -1,24 +1,28 @@
 import React, { createContext, useContext, useState } from "react";
 
 const SelectionContext = createContext();
-export const useSelectionContext = () => {
-  return useContext(SelectionContext);
-};
-
-export const SelectionProvider = ({ children }) => {
-  // Asegúrate de que se llame 'SelectionProvider'
-  const [selectedServices, setSelectedServices] = useState({
-    onlineService: false,
-    largerStorage: false,
-    customizableProfile: false,
-  });
-  const [isAnnual, setIsAnnual] = useState(false);
+export function SelectionProvider({ children }) {
+  const [isAnnual, setIsAnnual] = useState(false); // Estado para la modalidad anual
+  const [selectedPlan, setSelectedPlan] = useState(null); // Estado para el plan seleccionado
+  const [selectedServices, setSelectedServices] = useState({}); // Estado para servicios seleccionados
 
   return (
     <SelectionContext.Provider
-      value={{ selectedServices, setSelectedServices, isAnnual, setIsAnnual }}
+      value={{
+        isAnnual,
+        setIsAnnual,
+        selectedPlan,
+        setSelectedPlan,
+        selectedServices,
+        setSelectedServices,
+      }}
     >
       {children}
     </SelectionContext.Provider>
   );
-};
+}
+
+export function useSelectionContext() {
+  return useContext(SelectionContext);
+}
+
